@@ -1,7 +1,23 @@
+import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
+
+//Message Time Delay
+public static void timeDelay(){
+    try {
+        TimeUnit.SECONDS.sleep(2);
+      }
+    catch (InterruptedException ie) {
+        Thread.currentThread().interrupt();
+    }  
+}
+
+
+
 class Main {
   public static void main(String[] args) {
-    System.out.println("[welcome message]");
-
+    Scanner sc = new Scanner(System.in);
+    String playerName = "\"...\"";
+    System.out.println(playerName + ":Hello Grand Line!!!");
     // int userInput = 0;
     // while (true) {
     //   // print context for current decision
