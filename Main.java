@@ -39,24 +39,27 @@ class Main {
     String ShipName = sc.nextLine();
     System.out.println("\n\nWhich perk would you like\n(A) \"D Clan\"\n(B) Celestial Dragon\n(C) None");
     String perkChoice = sc.nextLine();
-    if(perkChoice.equals("D Clan")){
+    if(perkChoice.equals("A")){
         playerHealth += 20;
         Attack += 10;
         Defense += 15;
         HM += 10;
     }
+    else if(perkChoice.equals("A")){
+        playerHealth -= 20;
+        Attack -= 10;
+        Defense -= 15;
+    }
 
     //Start to the game
-    System.out.println(playerName + ": Time to start my adventure to become a great pirate!");
+    System.out.println("\n"+ playerName + ": Time to start my adventure to become a great pirate!");
     int gameLoop = 0;
     while (true) {
         timeDelay();
         System.out.print("\033[H\033[2J");  
         System.out.flush();
-        System.out.println(playerHealth);
         //Game Loop Start
 
-        System.out.println("[exit message]");
         gameLoop += 1;
       if (gameLoop != 0) {
         System.out.println("YOU DIED AT SEA");
