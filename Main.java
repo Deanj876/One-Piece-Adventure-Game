@@ -17,13 +17,8 @@ class Main {
 
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
-    //Player Stat Variables\\
-    int playerHealth = 100;
-    int Attack = 20;
-    int Defense = 20;
-    int DFM = 0;
-    int HM = 0;
-    int Bounty = 150;
+    playerStats ps = new playerStats();
+    externalVariables ev = new externalVariables();
     String playerName = "\"...\"";
 
     //Player Info Gather
@@ -39,15 +34,15 @@ class Main {
     String perkChoice = sc.nextLine();
 
     if(perkChoice.equals("A")){
-        playerHealth += 20;
-        Attack += 10;
-        Defense += 15;
-        HM += 10;
+        ps.playerHealth += 20;
+        ps.Attack += 10;
+        ps.Defense += 15;
+        ps.HM += 10;
     }
     else if(perkChoice.equals("B")){
-        playerHealth -= 20;
-        Attack -= 10;
-        Defense -= 15;
+        ps.playerHealth -= 20;
+        ps.Attack -= 10;
+        ps.Defense -= 15;
     }
 
     //Start to the game
@@ -58,6 +53,29 @@ class Main {
         System.out.print("\033[H\033[2J");  
         System.out.flush();
         //Game Loop Start
+        System.out.println("What would you Like to do?\n\n1.Look at a Log Post for Directions (1)\n2.Go to a shop(2)\n3.Rest(3)\n4.Look at your stats?(4)");
+        String input = sc.nextLine();
+        if(input.equals("4")){
+          while (true) {
+            System.out.print("\033[H\033[2J");  
+            System.out.flush();
+            System.out.println("\n----[" + playerName + " Stats]----");
+            System.out.println("Health Points: " + ps.playerHealth);
+            System.out.println("Attack Points: " + ps.Attack);
+            System.out.println("Defense Points: " + ps.Defense);
+            System.out.println("Devil Fruit Mastery Points: " + ps.DFM);
+            System.out.println("General Haki Mastery: " + ps.HM);
+            System.out.println("Bounty: " + ps.Bounty);
+            System.out.println("Go back to main area? (Y/N)");
+            input = sc.nextLine();
+            if(input.equals("Y") || input.equals("y")){
+              break;
+            }
+            else{
+              
+            }
+          }
+        }
 
         gameLoop += 1;
       if (gameLoop != 0) {
