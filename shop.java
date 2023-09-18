@@ -1,6 +1,7 @@
 public class shop{
-    public shop(){
-    System.out.print("\033[H\033[2J");  
-    System.out.flush();
+    externalVariables ev = new externalVariables();
+    public void playerShop(){
+        System.out.print("\033[H\033[2J");  
+        System.out.flush();
     }
 }

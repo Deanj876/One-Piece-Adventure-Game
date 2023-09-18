@@ -32,6 +32,6 @@ DFM (Devil Fruit Mastery) + 0
 HM (Haki Mastery) + 10
 
 ----Celestial Dragon Perk----
-Health - 0.25% ( +20 )
+Health - 0.25% ( -20 )
 Attack - 10
 Defense - 20
