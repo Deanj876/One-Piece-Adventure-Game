@@ -11,4 +11,4 @@ public class playerStats{
         // System.out.println("Devil Fruit Mastery Points: " + DFM);
         // System.out.println("General Haki Mastery: " + HM);
         // System.out.println("Bounty: " + Bounty);
-    }
+}
