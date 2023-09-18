@@ -63,9 +63,21 @@ class Main {
             System.out.println("Health Points: " + ps.playerHealth);
             System.out.println("Attack Points: " + ps.Attack);
             System.out.println("Defense Points: " + ps.Defense);
-            System.out.println("Devil Fruit Mastery Points: " + ps.DFM);
             System.out.println("General Haki Mastery: " + ps.HM);
             System.out.println("Bounty: " + ps.Bounty);
+            if(perkChoice.equals("A")){
+              System.out.println("\n----[D-Clan Stat Perks]----");
+              System.out.println("Health Points: +0.25% ( +20hp )");
+              System.out.println("Attack Points: +10ap");
+              System.out.println("Defense Points: +15dp");
+              System.out.println("General Haki Mastery: +10hm ");
+            }
+            else if(perkChoice.equals("B")){
+              System.out.println("\n----[D-Clan Stat Perks]----");
+              System.out.println("Health Points: -0.25% ( -20 )");
+              System.out.println("Attack Points: -10ap");
+              System.out.println("Defense Points: -20dp");
+            }
             System.out.println("Go back to main area? (Y/N)");
             input = sc.nextLine();
             if(input.equals("Y") || input.equals("y")){
@@ -76,8 +88,13 @@ class Main {
             }
           }
         }
+        else if(input.equals("3")){
+          System.out.println("You go back to the" + ShipName + "'s Captains Cabin to sleep");
+          ev.dayCounter += 1;
+          System.out.println("\nThe Day is: " + ev.dayCounter);
 
-        gameLoop += 1;
+        }
+
       if (gameLoop != 0) {
         System.out.println("YOU DIED AT SEA");
         break;
