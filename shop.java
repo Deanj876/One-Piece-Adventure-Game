@@ -8,7 +8,11 @@ public class shop{
             System.out.flush();
             System.out.println("Shop Keeper: Hello, If you looking for goods to be a great Marine....or Pirate then you have come to the right place.\nHere is my Current Stock");
             System.out.println("\n\n----{Shop Stock}----\n\n1.Sword [Out of Stock]\n2.Flintlock [Out of Stock]\n3.Mysterious Fruit [1,200]");
-            System.out.println("\nWhat Would you like to buy? :");
+            System.out.println("\nWhat Would you like to buy? (1 / 2 / 3) :");
+            String itemChoice = sc.nextLine();
+            if(itemChoice.equals("1") || itemChoice.equals("2")){
+                
+            }
         }
     }
 }
