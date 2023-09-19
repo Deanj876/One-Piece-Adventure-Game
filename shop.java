@@ -1,18 +1,39 @@
 import java.util.Scanner;
+
 public class shop{
     externalVariables ev = new externalVariables();
     Scanner sc = new Scanner(System.in);
+    Main m = new Main();
     public void playerShop(){
         while(true){
             System.out.print("\033[H\033[2J");  
             System.out.flush();
             System.out.println("Shop Keeper: Hello, If you looking for goods to be a great Marine....or Pirate then you have come to the right place.\nHere is my Current Stock");
             System.out.println("\n\n----{Shop Stock}----\n\n1.Sword [Out of Stock]\n2.Flintlock [Out of Stock]\n3.Mysterious Fruit [1,200]");
-            System.out.println("\nWhat Would you like to buy? (1 / 2 / 3) :");
+            System.out.println("\nWhat Would you like to buy? (1 / 2 / 3) or Do you want to leave (4) :");
             String itemChoice = sc.nextLine();
             if(itemChoice.equals("1") || itemChoice.equals("2")){
-                
+                System.out.println("\nShop Keeper: Sorry we don't currently have that in stock with all these mountain bandits around.");
             }
+            else if(itemChoice.equals("3")){
+                System.out.println("\nShop Keeper: So your looking for a fruit ay...Let's so how much you got.");
+                m.timeDelay();
+                if(ev.belli == 1200){
+                    System.out.println("\nShop Keeper: Looks like you got enough here is your fruit kid but don't tell nobody you got if from here especially a marine.");
+                    ev.devilFruitCounter += 1;
+                }
+                else{
+                    System.out.println("\nShop Keeper: Looks like you don't got enough kid, better lukc next time.\nAnything else you might want.");
+                }
+            }
+            else if(itemChoice.equals("4")){
+                System.out.println("\nShop Keeper: Well see you anound kid, come back when you have some more money or a high enough bounty.");
+                break;
+            }
+            else{
+                System.out.println("\nShop Keeper: Sorry what was that?");
+            }
+            m.timeDelay();
         }
     }
 }
