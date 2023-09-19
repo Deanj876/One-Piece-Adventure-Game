@@ -72,6 +72,9 @@ class Main {
             System.out.println("Defense Points: " + ps.Defense);
             System.out.println("General Haki Mastery: " + ps.HM);
             System.out.println("Bounty: " + ps.Bounty);
+            if(ev.devilFruitCounter == 1){
+              System.out.println("Devil Fruit Mastery: " + ps.DFM);
+            }
             //D-Clan stat changes
             if(perkChoice.equals("A")){
               System.out.println("\n----[D-Clan Stat Perks]----");

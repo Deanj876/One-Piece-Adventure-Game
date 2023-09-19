@@ -5,6 +5,7 @@ public class playerStats{
         public int DFM = 0;
         public int HM = 0;
         public int Bounty = 150;
+        int shipHealth = 200;
         // System.out.println("Health Points: " + playerHealth);
         // System.out.println("Attack Points: " + Attack);
         // System.out.println("Defense Points: " + Defense);
