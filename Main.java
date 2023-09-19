@@ -5,7 +5,7 @@ class Main {
     //Message Time Delay
     public static void timeDelay() {
         try {
-            TimeUnit.SECONDS.sleep(2);
+            TimeUnit.SECONDS.sleep(4);
           }
         catch (InterruptedException ie) {
         Thread.currentThread().interrupt();
@@ -20,6 +20,7 @@ class Main {
     playerStats ps = new playerStats();
     externalVariables ev = new externalVariables();
     shop s = new shop();
+    mapAndCombat mac = new mapAndCombat();
     String playerName = "\"...\"";
 
     //Player Info Gather
@@ -58,7 +59,7 @@ class Main {
         System.out.print("\033[H\033[2J");  
         System.out.flush();
         //Game Loop Start
-        System.out.println("What would you Like to do?\n\n1.Look at a Log Post for Directions (1)\n2.Go to a shop(2)\n3.Rest(3)\n4.Look at your stats?(4)");
+        System.out.println("What would you Like to do?\n\n1.Look at a Log Post for Directions (1)\n2.Go to a shop (2)\n3.Rest (3)\n4.Look at your stats? (4)");
         String input = sc.nextLine();
         if(input.equals("4")){
           while (true) {
