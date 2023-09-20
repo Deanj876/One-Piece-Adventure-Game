@@ -21,16 +21,16 @@ class Main {
     externalVariables ev = new externalVariables();
     shop s = new shop();
     mapAndCombat mac = new mapAndCombat();
-    String playerName = "\"...\"";
+    // String playerName = "\"...\"";
 
     //Player Info Gather
-    System.out.println(playerName + ": Hello Grand Line!!!");
+    System.out.println(ev.playerName + ": Hello Grand Line!!!");
     //Intro ^^
     timeDelay();
     System.out.println("\nA Mysterious Voice is heard in a Small hut");
     //Player Name
     System.out.println("\n\nPlayer Name :");
-    playerName = sc.nextLine();
+    ev.playerName = sc.nextLine();
     //Ship name
     System.out.println("\n\nShip Name :");
     String ShipName = sc.nextLine();
@@ -52,7 +52,7 @@ class Main {
     }
 
     //Start to the game
-    System.out.println("\n"+ playerName + ": Time to start my adventure to become a great pirate!");
+    System.out.println("\n"+ ev.playerName + ": Time to start my adventure to become a great pirate!");
     int gameLoop = 0;
     while (true) {
         timeDelay();
@@ -66,7 +66,7 @@ class Main {
             System.out.print("\033[H\033[2J");  
             System.out.flush();
             //Player base stats
-            System.out.println("\n----[" + playerName + " Stats]----");
+            System.out.println("\n----[" + ev.playerName + " Stats]----");
             System.out.println("Health Points: " + ps.playerHealth);
             System.out.println("Attack Points: " + ps.Attack);
             System.out.println("Defense Points: " + ps.Defense);
@@ -110,10 +110,15 @@ class Main {
 
         }
         else if(input.equals("2")){
-          System.out.println(playerName + " goes to the local shop on the island!");
+          System.out.println(ev.playerName + " goes to the local shop on the island!");
           s.playerShop();
 
         }
+        else if(input.equals("1")){
+          System.out.println(ev.playerName + ": Lets see where the log post will take me!");
+          mac.map();
+        }
+
       //Ends the game
       if (gameLoop != 0) {
         System.out.println("YOU DIED AT SEA");
