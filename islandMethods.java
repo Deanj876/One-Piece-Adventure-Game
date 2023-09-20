@@ -6,6 +6,7 @@ public class islandMethods{
   Scanner sc = new Scanner(System.in);
   Main m = new Main();
   externalVariables ev = new externalVariables();
+  mapAndCombat mac = new mapAndCombat();
   String enemyEncounter = " ";
   //Beginner / first combat island
   public void banditIsland(){
