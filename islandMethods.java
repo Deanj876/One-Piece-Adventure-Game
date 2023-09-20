@@ -10,6 +10,7 @@ public class islandMethods{
   String enemyEncounter = " ";
   //Beginner / first combat island
   public void banditIsland(){
+    Main m = new Main();
     while(true){
       System.out.print("\033[H\033[2J");  
       System.out.flush();

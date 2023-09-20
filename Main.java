@@ -14,7 +14,6 @@ class Main {
 
 
 
-
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     playerStats ps = new playerStats();
@@ -30,7 +29,8 @@ class Main {
     System.out.println("\nA Mysterious Voice is heard in a Small hut");
     //Player Name
     System.out.println("\n\nPlayer Name :");
-    ev.playerName = sc.nextLine();
+    String playerNameChoice = sc.nextLine();
+    String playerName = ev.playerName.replaceAll("\"...\"", playerNameChoice);
     //Ship name
     System.out.println("\n\nShip Name :");
     String ShipName = sc.nextLine();
@@ -52,7 +52,7 @@ class Main {
     }
 
     //Start to the game
-    System.out.println("\n"+ ev.playerName + ": Time to start my adventure to become a great pirate!");
+    System.out.println("\n"+ playerName + ": Time to start my adventure to become a great pirate!");
     int gameLoop = 0;
     while (true) {
         timeDelay();
@@ -66,7 +66,7 @@ class Main {
             System.out.print("\033[H\033[2J");  
             System.out.flush();
             //Player base stats
-            System.out.println("\n----[" + ev.playerName + " Stats]----");
+            System.out.println("\n----[" + playerName + " Stats]----");
             System.out.println("Health Points: " + ps.playerHealth);
             System.out.println("Attack Points: " + ps.Attack);
             System.out.println("Defense Points: " + ps.Defense);
@@ -110,12 +110,12 @@ class Main {
 
         }
         else if(input.equals("2")){
-          System.out.println(ev.playerName + " goes to the local shop on the island!");
+          System.out.println(playerName + " goes to the local shop on the island!");
           s.playerShop();
 
         }
         else if(input.equals("1")){
-          System.out.println(ev.playerName + ": Lets see where the log post will take me!");
+          System.out.println(playerName + ": Lets see where the log post will take me!");
           mac.map();
         }
 

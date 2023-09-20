@@ -29,7 +29,7 @@ public class mapAndCombat{
       System.out.flush();
       System.out.println("----YOU ENCOUNTERED A BANDIT MINION----");
       while(true){
-        System.out.println("Bandit Minion\nHealth" + ps.banditHealth);
+        System.out.println("Bandit Minion\nHealth: " + ps.banditHealth + "\nBounty: " + ps.banditBounty);
       }
     }
     //Bandit Boss Combat Phase
