@@ -1,13 +1,14 @@
 import java.util.Scanner;
-
 public class mapAndCombat{
     Scanner sc = new Scanner(System.in);
     public void combat(){
-      islandMethods im = new islandMethods();
       playerStats ps = new playerStats();
-      im.banditIsland();
+      Main m = new Main();
+      islandMethods im = new islandMethods();
+      im.banditIsland(m);
     }
     public void map(){
+      int logPostLevel = 0;
       Main m = new Main();
         while(true){
             System.out.print("\033[H\033[2J");  
@@ -25,11 +26,20 @@ public class mapAndCombat{
     //Bandit Minion Combat Phase
     public void banditMinion(){
       playerStats ps = new playerStats();
+      externalVariables ev = new externalVariables();
+      shop s = new shop();
       System.out.print("\033[H\033[2J");  
       System.out.flush();
       System.out.println("----YOU ENCOUNTERED A BANDIT MINION----");
       while(true){
         System.out.println("Bandit Minion\nHealth: " + ps.banditHealth + "\nBounty: " + ps.banditBounty);
+        System.out.println("\n" + ev.playerName + "\nHealth: " + ps.playerHealth + "\nBounty: " + ps.Bounty);
+        if(s.devilFruitCounter == 0){
+          System.out.println("\nWhat would you like to do?\n1.Attack (1)\n2.Defend (2)\n3.Run (3)");
+        }
+        else if(s.devilFruitCounter >= 1){
+          System.out.println("\nWhat would you like to do?\n1.Attack (1)\n2.Defend (2)\n3.Run (3)\n4.Use Devil Fruit (4)");
+        }
       }
     }
     //Bandit Boss Combat Phase

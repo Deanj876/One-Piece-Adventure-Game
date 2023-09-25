@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class shop{
     externalVariables ev = new externalVariables();
+    int devilFruitCounter = 0;
     Scanner sc = new Scanner(System.in);
     Main m = new Main();
     public void playerShop(){
@@ -20,7 +21,7 @@ public class shop{
                 m.timeDelay();
                 if(ev.belli == 1200){
                     System.out.println("\nShop Keeper: Looks like you got enough here is your fruit kid but don't tell nobody you got if from here especially a marine.");
-                    ev.devilFruitCounter += 1;
+                    devilFruitCounter += 1;
                 }
                 else{
                     System.out.println("\nShop Keeper: Looks like you don't got enough kid, better lukc next time.\nAnything else you might want.");

@@ -13,7 +13,7 @@ class Main {
     }
 
 
-
+    //public String playerNameTest = "TEST";
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     playerStats ps = new playerStats();
@@ -23,13 +23,12 @@ class Main {
     // String playerName = "\"...\"";
 
     //Player Info Gather
+    //Player Name
     System.out.println(ev.playerName + ": Hello Grand Line!!!");
     //Intro ^^
     timeDelay();
     System.out.println("\nA Mysterious Voice is heard in a Small hut");
-    //Player Name
-    System.out.println("\n\nPlayer Name :");
-    ev.playerName = sc.nextLine();
+    // Final ev.playerName = playerName;
     //Ship name
     System.out.println("\n\nShip Name :");
     String ShipName = sc.nextLine();
@@ -71,7 +70,7 @@ class Main {
             System.out.println("Defense Points: " + ps.Defense);
             System.out.println("General Haki Mastery: " + ps.HM);
             System.out.println("Bounty: " + ps.Bounty);
-            if(ev.devilFruitCounter == 1){
+            if(s.devilFruitCounter == 1){
               System.out.println("Devil Fruit Mastery: " + ps.DFM);
             }
             //D-Clan stat changes

@@ -8,34 +8,35 @@ public class islandMethods{
   externalVariables ev = new externalVariables();
   mapAndCombat mac = new mapAndCombat();
   String enemyEncounter = " ";
+  //Random Encounter Generator
+  void encounterRandomizer(){
+    int randomEncounter = (int)(Math.random() * 3) + 1;
+    if(randomEncounter == 1){
+      enemyEncounter = "Boss";
+    }
+    else{
+      enemyEncounter = "Minion";
+    }
+  }
   //Beginner / first combat island
-  public void banditIsland(){
-    Main m = new Main();
+  public void banditIsland(Main m){
     while(true){
       System.out.print("\033[H\033[2J");  
       System.out.flush();
-      System.out.println(ev.playerName + ": So this is the bandit island, Let's see what these guys are made of!");
+      System.out.println("----You have arrived at Bandit Island----");
+
       m.timeDelay();
       //Bandit Combat
       if(enemyEncounter.equals("Boss")){
-        //Combat
+        //BOSS
       }
       else if(enemyEncounter.equals("Minion")){
-        //Combat
+        mac.banditMinion();
       }
       else{
         System.out.println("\n----You encountered no enemies thus far.----");
       }
     m.timeDelay();
-    }
-  }
-  void encounterRandomizer(){
-    int randomEncounter = (int)(Math.random() * 5) + 1;
-    if(randomEncounter % 2 == 0){
-      enemyEncounter = "Boss";
-    }
-    else{
-      enemyEncounter = "Minion";
     }
   }
 }
