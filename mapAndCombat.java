@@ -5,7 +5,7 @@ public class mapAndCombat{
       playerStats ps = new playerStats();
       Main m = new Main();
       islandMethods im = new islandMethods();
-      im.banditIsland(m);
+      im.banditIsland();
     }
     public void map(){
       int logPostLevel = 0;

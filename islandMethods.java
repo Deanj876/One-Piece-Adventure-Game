@@ -19,13 +19,14 @@ public class islandMethods{
     }
   }
   //Beginner / first combat island
-  public void banditIsland(Main m){
+  public void banditIsland(){
     while(true){
       System.out.print("\033[H\033[2J");  
       System.out.flush();
       System.out.println("----You have arrived at Bandit Island----");
 
       m.timeDelay();
+      encounterRandomizer();
       //Bandit Combat
       if(enemyEncounter.equals("Boss")){
         //BOSS
