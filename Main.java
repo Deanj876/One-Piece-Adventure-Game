@@ -59,62 +59,64 @@ class Main {
         //Game Loop Start
         System.out.println("What would you Like to do?\n\n1.Look at a Log Post for Directions (1)\n2.Go to a shop (2)\n3.Rest (3)\n4.Look at your stats? (4)");
         String input = sc.nextLine();
-        if(input.equals("4")){
-          while (true) {
-            System.out.print("\033[H\033[2J");  
-            System.out.flush();
-            //Player base stats
-            System.out.println("\n----[" + ev.playerName + " Stats]----");
-            System.out.println("Health Points: " + ps.playerHealth);
-            System.out.println("Attack Points: " + ps.Attack);
-            System.out.println("Defense Points: " + ps.Defense);
-            System.out.println("General Haki Mastery: " + ps.HM);
-            System.out.println("Bounty: " + ps.Bounty);
-            if(s.devilFruitCounter == 1){
-              System.out.println("Devil Fruit Mastery: " + ps.DFM);
+        switch (input) {
+          case "4":
+            while (true) {
+              System.out.print("\033[H\033[2J");  
+              System.out.flush();
+              //Player base stats
+              System.out.println("\n----[" + ev.playerName + " Stats]----");
+              System.out.println("Health Points: " + ps.playerHealth);
+              System.out.println("Attack Points: " + ps.Attack);
+              System.out.println("Defense Points: " + ps.Defense);
+              System.out.println("General Haki Mastery: " + ps.HM);
+              System.out.println("Bounty: " + ps.Bounty);
+              if (s.devilFruitCounter == 1) {
+                System.out.println("Devil Fruit Mastery: " + ps.DFM);
+              }
+              switch (perkChoice) {
+                case "A":
+                  System.out.println("\n----[D-Clan Stat Perks]----");
+                  System.out.println("Health Points: +0.25% ( +20hp )");
+                  System.out.println("Attack Points: +10ap");
+                  System.out.println("Defense Points: +15dp");
+                  System.out.println("General Haki Mastery: +10hm ");
+                  break;
+                case "B":
+                  System.out.println("\n----[Celestial Dragon Stat Perks]----");
+                  System.out.println("Health Points: -0.25% ( -20 )");
+                  System.out.println("Attack Points: -10ap");
+                  System.out.println("Defense Points: -20dp");
+                  break;
+                default:
+                  // Handle invalid input
+                  break;
+              }
+              System.out.println("Go back to main area? (Y/N)");
+              input = sc.nextLine();
+              //Decided whether to go back to the main game selection
+              if (input.equalsIgnoreCase("Y")) {
+                break;
+              }
             }
-            //D-Clan stat changes
-            if(perkChoice.equals("A")){
-              System.out.println("\n----[D-Clan Stat Perks]----");
-              System.out.println("Health Points: +0.25% ( +20hp )");
-              System.out.println("Attack Points: +10ap");
-              System.out.println("Defense Points: +15dp");
-              System.out.println("General Haki Mastery: +10hm ");
-            }
-            //Celestial dragon stat changes
-            else if(perkChoice.equals("B")){
-              System.out.println("\n----[Celestial Dragon Stat Perks]----");
-              System.out.println("Health Points: -0.25% ( -20 )");
-              System.out.println("Attack Points: -10ap");
-              System.out.println("Defense Points: -20dp");
-            }
-            System.out.println("Go back to main area? (Y/N)");
-            input = sc.nextLine();
-            //Decided whether to go back to the main game selection
-            if(input.equals("Y") || input.equals("y")){
-              break;
-            }
-            else{
-              
-            }
-          }
-        }
-        //Player sleeps
-        else if(input.equals("3")){
-          System.out.println("You go back to the" + ShipName + "'s Captains Cabin to sleep");
-          //Progresses the day
-          ev.dayCounter += 1;
-          System.out.println("\nThe Day is: " + ev.dayCounter);
-
-        }
-        else if(input.equals("2")){
-          System.out.println(ev.playerName + " goes to the local shop on the island!");
-          s.playerShop();
-
-        }
-        else if(input.equals("1")){
-          System.out.println(ev.playerName + ": Lets see where the log post will take me!");
-          mac.map();
+            break;
+          case "3":
+            System.out.println("You go back to the" + ShipName + "'s Captains Cabin to sleep");
+            //Progresses the day
+            ev.dayCounter += 1;
+            System.out.println("\nThe Day is: " + ev.dayCounter);
+            break;
+          case "2":
+            System.out.println(ev.playerName + " goes to the local shop on the island!");
+            s.playerShop();
+            break;
+          case "1":
+            System.out.println(ev.playerName + ": Lets see where the log post will take me!");
+            mac.map();
+            break;
+          default:
+            // Handle invalid input
+            break;
         }
 
       //Ends the game
