@@ -9,8 +9,8 @@ Bounty: 150 beli
 
 ----Mountain Bandit Stats----
 Health: 100
-Attack: 20
-Defense: 20
+Attack: 15
+Defense: 15
 DFM (Devil Fruit Mastery): 0
 HM (Haki Mastery): 0
 Bounty: 200 beli

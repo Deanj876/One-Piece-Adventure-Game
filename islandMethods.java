@@ -33,6 +33,15 @@ public class islandMethods{
       }
       else if(enemyEncounter.equals("Minion")){
         mac.banditMinion();
+        System.out.println("Do you wish to continue exploring the island? (Y/N):");
+        String contineChoice = sc.nextLine();
+        if(contineChoice.equals("y") || contineChoice.equals("Y")){
+          System.out.println("\n----You continue to explore the island.----");
+        }
+        else{
+          System.out.println("\n----You leave the island.----");
+          break;
+        }
       }
       else{
         System.out.println("\n----You encountered no enemies thus far.----");

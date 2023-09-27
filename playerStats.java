@@ -12,8 +12,8 @@ public class playerStats{
         // System.out.println("Devil Fruit Mastery Points: " + DFM);
         // System.out.println("General Haki Mastery: " + HM);
         // System.out.println("Bounty: " + Bounty);
-        int banditHealth = 100;
-        int banditAttack = 20;
-        int banditDefense = 20;
-        int banditBounty = 200;
+        int banditHealth = 85;
+        int banditAttack = 15;
+        int banditDefense = 15;
+        int banditBounty = 100;
 }
