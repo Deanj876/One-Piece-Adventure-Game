@@ -1,4 +1,4 @@
-public class playerStats{
+public class playerStats extends Main{
         public int playerHealth = 100;
         public int Attack = 20;
         public int Defense = 20;

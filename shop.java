@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class shop{
+public class shop extends Main{
     externalVariables ev = new externalVariables();
     int devilFruitCounter = 0;
     Scanner sc = new Scanner(System.in);

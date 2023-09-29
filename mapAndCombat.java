@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class mapAndCombat{
+public class mapAndCombat extends Main{
     Scanner sc = new Scanner(System.in);
     public void combat(){
       playerStats ps = new playerStats();

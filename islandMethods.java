@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.lang.Math;
 
-public class islandMethods{
+public class islandMethods extends Main{
   //int randomNum = (int) (Math.random() * (10 + 1));
   Scanner sc = new Scanner(System.in);
   Main m = new Main();
