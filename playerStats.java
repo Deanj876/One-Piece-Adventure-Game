@@ -1,19 +1,55 @@
-public class playerStats extends Main{
-        public int playerHealth = 100;
-        public int Attack = 20;
-        public int Defense = 20;
-        public int DFM = 0;
-        public int HM = 0;
-        public int Bounty = 150;
-        int shipHealth = 200;
-        // System.out.println("Health Points: " + playerHealth);
-        // System.out.println("Attack Points: " + Attack);
-        // System.out.println("Defense Points: " + Defense);
-        // System.out.println("Devil Fruit Mastery Points: " + DFM);
-        // System.out.println("General Haki Mastery: " + HM);
-        // System.out.println("Bounty: " + Bounty);
-        int banditHealth = 85;
-        int banditAttack = 15;
-        int banditDefense = 15;
-        int banditBounty = 100;
+// public class playerStats extends Main{
+//         public int playerHealth = 100;
+//         public int Attack = 20;
+//         public int Defense = 20;
+//         public int DFM = 0;
+//         public int HM = 0;
+//         public int Bounty = 150;
+//         int shipHealth = 200;
+//         // System.out.println("Health Points: " + playerHealth);
+//         // System.out.println("Attack Points: " + Attack);
+//         // System.out.println("Defense Points: " + Defense);
+//         // System.out.println("Devil Fruit Mastery Points: " + DFM);
+//         // System.out.println("General Haki Mastery: " + HM);
+//         // System.out.println("Bounty: " + Bounty);
+//         int banditHealth = 85;
+//         int banditAttack = 15;
+//         int banditDefense = 15;
+//         int banditBounty = 100;
+// }
+
+public class playerStats {
+  private int health;
+  private int attack;
+  private int defense;
+
+  public playerStats(int health, int attack, int defense) {
+    this.health = health;
+    this.attack = attack;
+    this.defense = defense;
+  }
+
+  public int getHealth() {
+    return health;
+  }
+
+  public void setHealth(int health) {
+    this.health = health;
+  }
+
+  public int getAttack() {
+    return attack;
+  }
+
+  public void setAttack(int attack) {
+    this.attack = attack;
+  }
+
+  public int getDefense() {
+    return defense;
+  }
+
+  public void setDefense(int defense) {
+    this.defense = defense;
+  }
 }

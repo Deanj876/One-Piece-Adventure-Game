@@ -93,3 +93,15 @@ public class mapAndCombat extends Main{
     }
     //Bandit Boss Combat Phase
 }
+// class mapAndCombat {
+//     private PlayerStats playerStats;
+
+//     public mapAndCombat(PlayerStats playerStats) {
+//         this.playerStats = playerStats;
+//     }
+
+//     public void startCombat() {
+//         // Combat logic
+//         playerStats.setHealth(playerStats.getHealth() - 10);
+//     }
+// }
