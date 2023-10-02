@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class shop extends Main{
     externalVariables ev = new externalVariables();
     int devilFruitCounter = 0;
-    Scanner sc = new Scanner(System.in);
     Main m = new Main();
     public void playerShop(){
         while(true){
@@ -12,6 +11,7 @@ public class shop extends Main{
             System.out.println("Shop Keeper: Hello, If you looking for goods to be a great Marine....or Pirate then you have come to the right place.\nHere is my Current Stock");
             System.out.println("\n\n----{Shop Stock}----\n\n1.Sword [Out of Stock]\n2.Flintlock [Out of Stock]\n3.Mysterious Fruit [1,200]");
             System.out.println("\nWhat Would you like to buy? (1 / 2 / 3) or Do you want to leave (4) :");
+            Scanner sc = new Scanner(System.in);
             String itemChoice = sc.nextLine();
             if(itemChoice.equals("1") || itemChoice.equals("2")){
                 System.out.println("\nShop Keeper: Sorry we don't currently have that in stock with all these mountain bandits around.");
@@ -38,3 +38,16 @@ public class shop extends Main{
         }
     }
 }
+
+// class shop {
+//     private PlayerStats playerStats;
+
+//     public shop(PlayerStats playerStats) {
+//         this.playerStats = playerStats;
+//     }
+
+//     public void buyItem() {
+//         // Shop logic
+//         playerStats.setAttack(playerStats.getAttack() + 5);
+//     }
+// }

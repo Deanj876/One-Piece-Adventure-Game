@@ -40,6 +40,7 @@ public class islandMethods extends Main{
         }
         else{
           System.out.println("\n----You leave the island.----");
+          System.out.println("\n----Time for more fun in----");
           break;
         }
       }

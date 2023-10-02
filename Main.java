@@ -116,7 +116,18 @@ class Main {
           System.out.println(ev.playerName + ": Lets see where the log post will take me!");
           mac.map();
         }
-
+        else if(input.equals("Purgatory") || input.equals("purgatory")){
+          timeDelay();
+          System.out.print("\033[H\033[2J");  
+          System.out.flush();
+          System.out.println("Narrator: You have found the secret ending to the game, Congrats!");
+          System.out.println("\nNarrator: The real reason why your health won't change, you neither gain or lose money, or anyting for that matter is that you died");
+          System.out.println("\nNarrator: You died in the first battle with the bandit minion, you just didn't know it.");
+          System.out.println("\nNarrator: Now your in Purgatory, You can't leave, you can't die, you can't do anything. In a endless loop of nothingness.");
+          System.out.println("\nNarrator: \"Rengoku\" should have been a huge hint, it literally means \"Purgatory\" in Japanese.");
+          System.out.println("\nNarrator: Well i\'m done here, you can sit here for a little bit and take all this in...Bye Bestie!!");
+          break;
+        }
       //Ends the game
       if (gameLoop != 0) {
         System.out.println("YOU DIED AT SEA");
