@@ -173,6 +173,7 @@ public class Main {
             break;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of defe426 (Working on Combat)
 
             } else if (input.equals("1")) {
@@ -187,6 +188,8 @@ public class Main {
             }
         }
 =======
+=======
+>>>>>>> parent of defe426 (Working on Combat)
 
       //Ends the game
       if (gameLoop != 0) {
