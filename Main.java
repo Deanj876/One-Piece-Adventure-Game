@@ -172,6 +172,7 @@ public class Main {
             // Handle invalid input
             break;
         }
+<<<<<<< HEAD
 >>>>>>> parent of defe426 (Working on Combat)
 
             } else if (input.equals("1")) {
@@ -185,5 +186,13 @@ public class Main {
                 break;
             }
         }
+=======
+
+      //Ends the game
+      if (gameLoop != 0) {
+        System.out.println("YOU DIED AT SEA");
+        break;
+      }
+>>>>>>> parent of defe426 (Working on Combat)
     }
 }
