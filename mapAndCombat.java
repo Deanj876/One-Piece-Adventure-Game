@@ -46,43 +46,41 @@ public class mapAndCombat extends Main{
           System.out.println("\nWhat would you like to do?\n1.Attack (1)\n2.Defend (2)\n3.Run (3)");
           String combatChoice = sc.nextLine();
           //Run
-          if(combatChoice.equals("3")){
-            System.out.println("\nYou ran away from the Bandit Minion.");
-            break;
-          }
-          //Attack
-          else if(combatChoice.equals("1")){
-            System.out.println("\nYou attacked the Bandit Minion.");
-            ps.banditHealth -= ps.Attack;
-            System.out.println("\nYou took " + ps.Attack + " from the Bandit Minion.");
-            if(ps.banditHealth <= 0){
-              System.out.println("\nYou defeated the Bandit Minion.");
+          switch (combatChoice) {
+            case "1":
+              System.out.println("\nYou attacked the Bandit Minion.");
+              ps.banditHealth -= ps.Attack;
+              System.out.println("\nYou took " + ps.Attack + " from the Bandit Minion.");
+              if (ps.banditHealth <= 0) {
+                System.out.println("\nYou defeated the Bandit Minion.");
+                break;
+              } else {
+                System.out.println("\nThe Bandit Minion attacked you.");
+                ps.playerHealth -= ps.banditAttack;
+                System.out.println("\nThe Bandit Minion took " + ps.banditAttack + " from you.");
+                if (ps.playerHealth <= 0) {
+                  System.out.println("\nYou were defeated by the Bandit Minion.");
+                  System.out.println("Your bounty was raised by 100!");
+                  ps.Bounty += 100;
+                  break;
+                }
+              }
               break;
-            }
-            else{
-              System.out.println("\nThe Bandit Minion attacked you.");
-              ps.playerHealth -= ps.banditAttack;
-              System.out.println("\nThe Bandit Minion took " + ps.banditAttack + " from you.");
-              if(ps.playerHealth <= 0){
+            case "2":
+              System.out.println("\nYou defended against the Bandit Minion.");
+              ps.playerHealth -= ps.banditAttack / 2;
+              System.out.println("\nThe Bandit Minion only took " + ps.banditAttack / 2 + " from you.");
+              if (ps.playerHealth <= 0) {
                 System.out.println("\nYou were defeated by the Bandit Minion.");
-                System.out.println("Your bounty was raised by 100!");
-                ps.Bounty += 100;
                 break;
               }
-            }
-          }
-          //Defend
-          else if(combatChoice.equals("2")){
-            System.out.println("\nYou defended against the Bandit Minion.");
-            ps.playerHealth -= ps.banditAttack / 2;
-            System.out.println("\nThe Bandit Minion only took " + ps.banditAttack / 2 + " from you.");
-            if(ps.playerHealth <= 0){
-              System.out.println("\nYou were defeated by the Bandit Minion.");
               break;
-            }
-          }
-          else{
-            System.out.println("\nSorry what was that?");
+            case "3":
+              System.out.println("\nYou ran away from the Bandit Minion.");
+              break;
+            default:
+              // Handle invalid input
+              break;
           }
         }
         else if(s.devilFruitCounter >= 1){
