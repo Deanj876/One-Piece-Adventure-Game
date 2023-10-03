@@ -39,15 +39,15 @@ public class shop extends Main{
     }
 }
 
-// class shop {
-//     private PlayerStats playerStats;
+// // class shop {
+// //     private PlayerStats playerStats;
 
-//     public shop(PlayerStats playerStats) {
-//         this.playerStats = playerStats;
-//     }
+// //     public shop(PlayerStats playerStats) {
+// //         this.playerStats = playerStats;
+// //     }
 
-//     public void buyItem() {
-//         // Shop logic
-//         playerStats.setAttack(playerStats.getAttack() + 5);
-//     }
-// }
+// //     public void buyItem() {
+// //         // Shop logic
+// //         playerStats.setAttack(playerStats.getAttack() + 5);
+// //     }
+// // }
